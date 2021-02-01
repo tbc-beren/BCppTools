@@ -74,17 +74,14 @@ TEST(Base64, encodeAndDecodeURL) {
     };
 
     for (const auto& item: testEntries) {
-        BCBase64 b64;
-        b64.encode(item.first);
-
-        std::string output = b64.hash();
+        std::string output = BCBase64::encodeAll(item.first);
         BCBase64::toURL(output);
 
         EXPECT_EQ(item.second, output);
 
         BCBase64::fromURL(output);
 
-        b64.clear();
+        BCBase64 b64;
         b64.decode(output);
         EXPECT_EQ(item.first, b64.hash());
     }

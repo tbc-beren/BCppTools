@@ -43,6 +43,11 @@ namespace hash {
                 base64url.pop_back();
             }
         }
+        static std::string encodeAll(const std::string& input) {
+            BCBase64 me;
+            me.encode(input);
+            return me.hash();
+        }
 
         void clear() {
             mHash.clear();
