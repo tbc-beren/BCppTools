@@ -69,17 +69,22 @@ TEST(Base64, encodeAndDecodeURL) {
     (void)txt;
 
     std::vector<std::pair<std::string, std::string>> testEntries = {
+        {"1",                   "MQ"},
+        {"12",                  "MTI"},
+        {"123",                 "MTIz"},
         {"\370\017\301",        "-A_B"},
         {"x",                   "eA"},
     };
 
     for (const auto& item: testEntries) {
-        std::string output = BCBase64::encodeAll(item.first);
-        BCBase64::toURL(output);
+        const std::string encodedB64 = BCBase64::encodeAll(item.first);
 
+        std::string output(encodedB64);
+        BCBase64::toURL(output);
         EXPECT_EQ(item.second, output);
 
         BCBase64::fromURL(output);
+        EXPECT_EQ(encodedB64, output);
 
         BCBase64 b64;
         b64.decode(output);

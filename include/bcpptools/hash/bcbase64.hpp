@@ -30,9 +30,11 @@ namespace hash {
         static void fromURL(std::string& base64url) {
             std::replace(base64url.begin(), base64url.end(), '-', '+');
             std::replace(base64url.begin(), base64url.end(), '_', '/');
-            auto extra = base64url.size() % 4;
-            while(0 != extra--) {
-                base64url.push_back('=');
+            auto extra = 4 - (base64url.size() % 4);
+            if (4 > extra) {
+                while(0 != extra--) {
+                    base64url.push_back('=');
+                }
             }
         }
         static void toURL(std::string& base64url) {
