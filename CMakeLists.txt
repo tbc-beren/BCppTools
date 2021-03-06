@@ -70,15 +70,9 @@ enable_testing()
 add_executable(
     BCppToolsTest
 
-    # Useful testing tools
-    #test/testTools.cpp
-
     # The tests
     test/testHashBase64.cpp
-    #test/testObject.cpp
-    #test/testArray.cpp
-    #test/testParser.cpp
-    #test/testWriter.cpp
+    test/testTimeClock.cpp
     )
 target_link_libraries(BCppToolsTest gtest_main)
 target_link_libraries(BCppToolsTest BCppTools ${COVERAGE_OPTIONS})
