@@ -65,8 +65,16 @@ class BCClock
 public:
     typedef std::shared_ptr<BCClockInstance> BCClockPtr;
 
+    static const int SECONDS = 1000;
+
     static uint64_t now() {
         return instance()->now();
+    }
+    static uint64_t nowAs(int unit) {
+        return instance()->now() / unit;
+    }
+    static uint64_t nowAsSeconds() {
+        return nowAs(SECONDS);
     }
     static bool advance(uint64_t seconds) {
         return instance()->advance(seconds);

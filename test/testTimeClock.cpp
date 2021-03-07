@@ -41,4 +41,8 @@ TEST(TimeClock, BCClockFFw) {
     EXPECT_EQ(0, BCClock::now());
     EXPECT_TRUE(BCClock::advance(100));
     EXPECT_EQ(100, BCClock::now());
+
+    EXPECT_EQ(0, BCClock::nowAsSeconds());
+    BCClock::advance(1000);
+    EXPECT_EQ(1, BCClock::nowAsSeconds());
 }
