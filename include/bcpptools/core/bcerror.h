@@ -1,10 +1,18 @@
 /**
-*  \file    bcpptools/core/bcerror.h
-*  \brief   Generic error related stuff such as error categories and error codes
+*
+* The Black Codex Library: Chapter: C++ Tools
+*
+* https://github.com/tbc-beren/BCppTools
+*
+* Mozilla Public License Version 2.0
+* https://github.com/tbc-beren/BCppTools/blob/master/LICENSE
+*
+* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+* If a copy of the MPL was not distributed with this file, You can obtain one at
+* https://mozilla.org/MPL/2.0/.
+*
 */
-#ifndef __bctools__error__
-#define __bctools__error__
-
+#pragma once
 
 #include <bcpptools/core/bctypes.h>
 
@@ -51,6 +59,3 @@ typedef uint32_t                    bcerror_t;
 #ifdef __cplusplus
 } // extern "C"
 #endif
-
-
-#endif // __bctools__error__

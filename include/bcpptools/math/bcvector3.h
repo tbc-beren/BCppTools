@@ -7,9 +7,12 @@
 * Mozilla Public License Version 2.0
 * https://github.com/tbc-beren/BCppTools/blob/master/LICENSE
 *
+* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+* If a copy of the MPL was not distributed with this file, You can obtain one at
+* https://mozilla.org/MPL/2.0/.
+*
 */
-#ifndef __bcpptools__math__vector3__
-#define __bcpptools__math__vector3__
+#pragma once
 
 namespace bcpptools {
 namespace math {
@@ -57,6 +60,3 @@ namespace math {
 
 } // namespace math
 } // namespace bcpptools
-
-
-#endif //#ifndef __bcpptools__math__vector3__

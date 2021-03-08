@@ -7,9 +7,12 @@
 * Mozilla Public License Version 2.0
 * https://github.com/tbc-beren/BCppTools/blob/master/LICENSE
 *
+* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+* If a copy of the MPL was not distributed with this file, You can obtain one at
+* https://mozilla.org/MPL/2.0/.
+*
 */
-#ifndef __bcpptools__multimedia__image__color__
-#define __bcpptools__multimedia__image__color__
+#pragma once
 
 #include <bcpptools/core/bctypes.h>
 
@@ -94,6 +97,3 @@ namespace image {
 } // namespace image
 } // namespace multimedia
 } // namespace bcpptools
-
-
-#endif //#ifndef __bcpptools__multimedia__image__color__

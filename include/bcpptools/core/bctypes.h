@@ -1,10 +1,18 @@
 /**
-*  \file    types.h
-*  \brief   Generic type-related stuff for c sources
+*
+* The Black Codex Library: Chapter: C++ Tools
+*
+* https://github.com/tbc-beren/BCppTools
+*
+* Mozilla Public License Version 2.0
+* https://github.com/tbc-beren/BCppTools/blob/master/LICENSE
+*
+* This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+* If a copy of the MPL was not distributed with this file, You can obtain one at
+* https://mozilla.org/MPL/2.0/.
+*
 */
-#ifndef __bctools__types__
-#define __bctools__types__
-
+#pragma once
 
 #ifdef __cplusplus
 
@@ -64,5 +72,3 @@ static const size_t BCSIZE_MAX = ~((size_t)0);
 #else
 #define             BCSIZE_MAX  (~((size_t)0))
 #endif
-
-#endif //__bctools__types__
